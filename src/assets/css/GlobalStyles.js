@@ -56,6 +56,6 @@ a{
 }
 body{
     font-family: 'Roboto', sans-serif;
-    color: #C4C4C4
+    color: #fff
 }
 `;
