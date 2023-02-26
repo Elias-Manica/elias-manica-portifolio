@@ -5,7 +5,11 @@ export const Container = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 150px;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const ViewText = styled.div``;
@@ -24,11 +28,14 @@ export const ViewName = styled.div`
   }
 `;
 
-export const TextName = styled.h1`
+export const TextName = styled.h3`
   font-size: 100px;
   color: #864cf0;
   font-weight: bold;
   display: flex;
+  @media (max-width: 1080px) {
+    font-size: 70px;
+  }
 `;
 
 export const TextDescription = styled.h2`

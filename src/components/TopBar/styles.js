@@ -14,9 +14,13 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   transition: all ease 0.5s;
-  div {
-    display: flex;
-    align-items: center;
+`;
+
+export const ViewOption = styled.div`
+  display: flex;
+  align-items: center;
+  @media (max-width: 900px) {
+    display: none;
   }
 `;
 
@@ -62,7 +66,7 @@ export const TextSection = styled.h2`
 export const ButtonCV = styled.div`
   cursor: pointer;
   height: 50px;
-  width: 15%;
+  width: 18%;
   background-color: #864cf0;
   border-radius: 7px;
   margin-right: 50px;
@@ -71,4 +75,41 @@ export const ButtonCV = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 900px) {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    font-size: 12px;
+    width: 35%;
+    margin-right: 15px;
+  }
+`;
+
+export const TextMobile = styled.p`
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-left: 15px;
+  color: #000;
+`;
+
+export const ContainerImage = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 900px) {
+    display: none;
+  }
+`;
+
+export const ImageMobile = styled.img`
+  height: 70px;
+  margin-right: 50px;
+`;
+
+export const ButtonMobile = styled.div`
+  @media (min-width: 900px) {
+    display: none;
+  }
 `;
