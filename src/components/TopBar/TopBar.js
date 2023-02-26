@@ -58,6 +58,7 @@ export default function TopBar({ showHeader }) {
           <TextSection>Experiência</TextSection>
           <TextSection>Educação</TextSection>
           <TextSection>Projetos</TextSection>
+          <TextSection>Contato</TextSection>
         </ViewOption>
         <ButtonMobile>
           <motion.nav

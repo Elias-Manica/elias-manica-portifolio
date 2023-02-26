@@ -2,6 +2,7 @@ import Typewriter from "typewriter-effect";
 
 import {
   Container,
+  HelloText,
   Image,
   TextDescription,
   TextName,
@@ -17,7 +18,7 @@ export default function Apresentation() {
       <Container>
         <ViewText>
           <ViewName>
-            <h1>Olá,</h1>
+            <HelloText>Olá,</HelloText>
             <p>eu sou o</p>
           </ViewName>
           <TextName>
