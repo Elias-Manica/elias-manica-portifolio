@@ -1,21 +1,32 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #000;
+  background-color: ${(props) => (props.showHeader ? "#000" : null)};
   height: 80px;
   width: 100%;
   z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: rgba(7, 7, 7, 0.75) -1px 3px 19px 11px;
+  box-shadow: ${(props) =>
+    props.showHeader ? "rgba(7, 7, 7, 0.75) -1px 3px 19px 11px;" : null};
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all ease 0.5s;
   div {
     display: flex;
     align-items: center;
   }
+`;
+
+export const LineDivision = styled.div`
+  height: ${(props) => (props.showHeader ? "1px" : "0px")};
+  width: 100%;
+  background-color: #864cf0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 `;
 
 export const Image = styled.img`
@@ -54,7 +65,7 @@ export const ButtonCV = styled.div`
   width: 15%;
   background-color: #864cf0;
   border-radius: 7px;
-  margin-right: 20px;
+  margin-right: 50px;
   font-weight: bold;
   font-size: 16px;
   display: flex;

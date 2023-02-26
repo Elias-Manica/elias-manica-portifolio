@@ -1,13 +1,20 @@
 import { motion } from "framer-motion";
 
-import { ButtonCV, Container, Image, TextSection } from "./styles";
+import {
+  ButtonCV,
+  Container,
+  Image,
+  LineDivision,
+  TextSection,
+} from "./styles";
 
 import leftImage from "../../assets/images/bitmoji.png";
 
-export default function TopBar() {
+export default function TopBar({ showHeader }) {
+  console.log(showHeader, " showHeard");
   return (
     <>
-      <Container>
+      <Container showHeader={showHeader}>
         <div>
           <Image src={leftImage} />
           <TextSection>Sobre mim</TextSection>
@@ -24,6 +31,7 @@ export default function TopBar() {
         >
           Baixe meu currículo
         </ButtonCV>
+        <LineDivision showHeader={showHeader} />
       </Container>
     </>
   );
