@@ -8,7 +8,7 @@ import {
   ViewApresentation,
 } from "./styles";
 
-import image from "../../assets/images/bit-comp.png";
+import image from "../../assets/images/bit-estudando.png";
 import Skills from "../Skills/Skills";
 import Experiencie from "../Experiencie/Experiencie";
 import Education from "../Education/Education";
@@ -66,15 +66,26 @@ export default function History({
             initial="hidden"
             variants={BoxVariants}
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum
+            Oi 👋, meu nome é Elias Manica e sou um desenvolvedor Full Stack!
+            <br />
+            <br />
+            Atualmente embarquei numa formação intensiva no bootcamp da Driven
+            Education 💻
+            <br />
+            <br />
+            Antes estudava Engenharia de Materiais ⚙️ na Universidade Federal do
+            Rio de Janeiro, porém após cursar as cadeiras de computação em
+            linguagem Python e entrar em contato mais profundo através do
+            movimento empresa júnior desenvolvi grande apego pela tecnologia e
+            decidi entrar na área.
+            <br />
+            <br />
+            Minha trajetória na empresa Fluxo Consultoria pode me apresentar o
+            mercado mais de perto, tendo contato com projetos reais e clientes
+            reais. Adquiri valores únicos que vou carregar para sempre como
+            sentimento de time e sede por desenvolvimento. No momento, estou
+            atuando como um membro externo consultando em projetos de React e
+            React Native 🤓
           </TextAbout>
         </ViewApresentation>
         <Tittle>Skills</Tittle>

@@ -23,6 +23,8 @@ import {
 import leftImage from "../../assets/images/bitmoji.png";
 import hiImage from "../../assets/images/bit-ola.png";
 
+import cv from "../../assets/images/CV-EliasManica.pdf";
+
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
@@ -146,10 +148,12 @@ export default function TopBar({
           <ImageMobile src={hiImage} />
         </ContainerImage>
         <ButtonCV
-          as={motion.div}
+          as={motion.a}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          href={cv}
+          download="CV-EliasManica.pdf"
         >
           Baixe meu currículo
         </ButtonCV>

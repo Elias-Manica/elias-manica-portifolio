@@ -11,7 +11,7 @@ import {
   ViewText,
 } from "./styles";
 
-import studing from "../../assets/images/bit-estudando.png";
+import studing from "../../assets/images/foto.jpeg";
 
 import { motion, useAnimation } from "framer-motion";
 

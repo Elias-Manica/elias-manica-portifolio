@@ -63,7 +63,7 @@ export const TextSection = styled.h2`
   }
 `;
 
-export const ButtonCV = styled.div`
+export const ButtonCV = styled.a`
   cursor: pointer;
   height: 50px;
   width: 18%;
@@ -75,6 +75,7 @@ export const ButtonCV = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
   @media (max-width: 900px) {
     position: absolute;
     top: 10px;

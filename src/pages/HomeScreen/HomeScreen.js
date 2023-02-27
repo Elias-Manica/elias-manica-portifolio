@@ -7,6 +7,8 @@ import TopBar from "../../components/TopBar/TopBar";
 
 import { Container, View } from "./styles";
 
+import Astronaut from "../../components/Astronaut/Astronaut";
+
 export default function HomeScreen() {
   const [showHeader, setShowHeader] = useState(false);
   const scollToRef = useRef();
@@ -45,6 +47,7 @@ export default function HomeScreen() {
           scollToCont={scollToCont}
         />
         <Container>
+          <Astronaut />
           <Apresentation />
           <History
             scollToRef={scollToRef}

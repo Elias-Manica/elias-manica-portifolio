@@ -61,6 +61,7 @@ export const TextDescription = styled.h2`
 export const Image = styled.img`
   margin-left: 100px;
   height: 350px;
+  border-radius: 50%;
   @media (max-width: 900px) {
     margin-left: 0px;
     height: 250px;
