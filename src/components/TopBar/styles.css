@@ -20,8 +20,9 @@ nav {
   left: 0;
   bottom: 0;
   width: 200px;
-  background: #fff;
+  background: #864cf0;
   height: 100vh;
+  color: #fff;
 }
 
 button {

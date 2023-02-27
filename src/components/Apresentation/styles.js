@@ -42,6 +42,7 @@ export const TextName = styled.h3`
   color: #864cf0;
   font-weight: bold;
   display: flex;
+  text-shadow: 4px -2px 5px rgba(255, 255, 255, 0.65);
   @media (max-width: 1080px) {
     font-size: 70px;
   }

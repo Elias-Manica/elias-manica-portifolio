@@ -90,7 +90,7 @@ export const TextMobile = styled.p`
   font-size: 12px;
   margin-top: 20px;
   margin-left: 15px;
-  color: #000;
+  color: #fff;
 `;
 
 export const ContainerImage = styled.div`
