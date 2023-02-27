@@ -10,6 +10,7 @@ import image from "../../assets/images/bit-comp.png";
 import Skills from "../Skills/Skills";
 import Experiencie from "../Experiencie/Experiencie";
 import Education from "../Education/Education";
+import Projects from "../Projects/Projects";
 
 export default function History() {
   return (
@@ -37,6 +38,7 @@ export default function History() {
         <Tittle>Educação</Tittle>
         <Education />
         <Tittle>Projetos</Tittle>
+        <Projects />
       </Container>
     </>
   );
