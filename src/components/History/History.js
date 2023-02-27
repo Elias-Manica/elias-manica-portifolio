@@ -36,6 +36,7 @@ export default function History() {
         <Experiencie />
         <Tittle>Educação</Tittle>
         <Education />
+        <Tittle>Projetos</Tittle>
       </Container>
     </>
   );

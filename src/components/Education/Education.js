@@ -1,6 +1,7 @@
 import {
   Container,
   Image,
+  ImageHide,
   Text,
   TextDate,
   TextOffice,
@@ -15,6 +16,7 @@ export default function Education() {
   return (
     <>
       <Container>
+        <ImageHide src={bookimg} isFirst={true} />
         <View>
           <ViewTittle>
             <TextOffice>Bootcamp de desenvolvimento web Full Stack</TextOffice>

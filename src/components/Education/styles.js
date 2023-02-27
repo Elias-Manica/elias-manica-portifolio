@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: center;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const View = styled.div`
@@ -46,4 +50,17 @@ export const Text = styled.p`
 
 export const Image = styled.img`
   height: ${(props) => (props.isFirst ? 250 : 200)}px;
+  @media (max-width: 900px) {
+    height: 100px;
+    display: ${(props) => (props.isFirst ? "none" : "initial")};
+  }
+`;
+
+export const ImageHide = styled.img`
+  height: ${(props) => (props.isFirst ? 250 : 200)}px;
+  display: none;
+  @media (max-width: 900px) {
+    height: 100px;
+    display: initial;
+  }
 `;
