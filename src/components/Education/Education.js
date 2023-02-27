@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import {
   Container,
   Image,
@@ -12,10 +14,43 @@ import {
 import bookimg from "../../assets/images/bit-livro.png";
 import angry from "../../assets/images/bit-pistola.png";
 
+import { motion, useAnimation } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
+
+const BoxVariants = {
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  hidden: { opacity: 0, x: -20 },
+};
+
 export default function Education({ scollToEduc }) {
+  const controls = useAnimation();
+  const controls2 = useAnimation();
+  const [ref, inView] = useInView();
+  const [refText, inViewText] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+    if (inViewText) {
+      controls2.start("visible");
+    } else {
+      controls2.start("hidden");
+    }
+  }, [controls, controls2, inView, inViewText]);
+
   return (
     <>
-      <Container ref={scollToEduc}>
+      <Container
+        ref={ref}
+        as={motion.div}
+        animate={controls}
+        initial="hidden"
+        variants={BoxVariants}
+      >
         <ImageHide src={bookimg} isFirst={true} />
         <View>
           <ViewTittle>
@@ -54,7 +89,13 @@ export default function Education({ scollToEduc }) {
         </View>
         <Image src={bookimg} isFirst={true} />
       </Container>
-      <Container>
+      <Container
+        ref={refText}
+        as={motion.div}
+        animate={controls2}
+        initial="hidden"
+        variants={BoxVariants}
+      >
         <Image src={angry} />
         <View>
           <ViewTittle>

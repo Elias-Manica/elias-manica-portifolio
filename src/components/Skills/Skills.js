@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { Container, ViewIcon, ViewName } from "./styles";
 
 import {
@@ -19,11 +21,37 @@ import {
   SiAmazonaws,
 } from "react-icons/si";
 
+import { motion, useAnimation } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
+
+const BoxVariants = {
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  hidden: { opacity: 0, x: 20 },
+};
+
 export default function Skills({ scollToSkills }) {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   return (
     <>
-      <Container ref={scollToSkills}>
-        <ViewIcon>
+      <Container
+        ref={ref}
+        as={motion.div}
+        animate={controls}
+        initial="hidden"
+        variants={BoxVariants}
+      >
+        <ViewIcon ref={scollToSkills}>
           <FaHtml5 />
           <ViewName>HTML</ViewName>
         </ViewIcon>

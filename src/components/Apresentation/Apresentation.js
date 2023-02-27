@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Typewriter from "typewriter-effect";
 
 import {
@@ -12,7 +13,27 @@ import {
 
 import studing from "../../assets/images/bit-estudando.png";
 
+import { motion, useAnimation } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
+
+const BoxVariants = {
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  hidden: { opacity: 0, x: 20 },
+};
+
 export default function Apresentation() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   return (
     <>
       <Container>
@@ -41,7 +62,14 @@ export default function Apresentation() {
             />
           </TextDescription>
         </ViewText>
-        <Image src={studing} />
+        <Image
+          src={studing}
+          as={motion.img}
+          ref={ref}
+          animate={controls}
+          initial="hidden"
+          variants={BoxVariants}
+        />
       </Container>
     </>
   );
