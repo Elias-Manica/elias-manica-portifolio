@@ -8,6 +8,7 @@ import {
 
 import image from "../../assets/images/bit-comp.png";
 import Skills from "../Skills/Skills";
+import Experiencie from "../Experiencie/Experiencie";
 
 export default function History() {
   return (
@@ -30,6 +31,8 @@ export default function History() {
         </ViewApresentation>
         <Tittle>Skills</Tittle>
         <Skills />
+        <Tittle>Experiência</Tittle>
+        <Experiencie />
       </Container>
     </>
   );

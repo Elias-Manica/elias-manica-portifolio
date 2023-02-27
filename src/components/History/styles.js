@@ -10,7 +10,7 @@ export const Container = styled.div`
 
 export const Tittle = styled.h3`
   font-size: 40px;
-  margin-top: ${(props) => (props.isFirst ? 0 : "50")}px;
+  margin-top: ${(props) => (props.isFirst ? 0 : "70")}px;
   color: #864cf0;
   font-weight: bold;
   display: flex;
