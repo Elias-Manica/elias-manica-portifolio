@@ -11,6 +11,7 @@ import Skills from "../Skills/Skills";
 import Experiencie from "../Experiencie/Experiencie";
 import Education from "../Education/Education";
 import Projects from "../Projects/Projects";
+import Contac from "../Contact/Contact";
 
 export default function History() {
   return (
@@ -39,6 +40,8 @@ export default function History() {
         <Education />
         <Tittle>Projetos</Tittle>
         <Projects />
+        <Tittle>Contato</Tittle>
+        <Contac />
       </Container>
     </>
   );

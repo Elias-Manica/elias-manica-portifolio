@@ -7,10 +7,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 20px;
   border-radius: 15px;
   margin-right: 20px;
   margin-top: 20px;
+  @media (max-width: 900px) {
+    margin-right: 0px;
+  }
 `;
 
 export const Name = styled.p`
