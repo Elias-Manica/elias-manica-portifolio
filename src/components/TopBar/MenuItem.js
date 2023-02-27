@@ -19,14 +19,69 @@ const variants = {
   },
 };
 
-export const MenuItem = ({ i }) => {
+export const MenuItem = ({
+  i,
+  toggleOpen,
+  scollToRef,
+  scollToSkills,
+  scollToExp,
+  scollToEduc,
+  scollToPro,
+  scollToCont,
+}) => {
+  function clicked(i) {
+    if (i === "Sobre mim") {
+      scollToRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+    if (i === "Skills") {
+      scollToSkills.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+    if (i === "Experiência") {
+      scollToExp.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+    if (i === "Educação") {
+      scollToEduc.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+    if (i === "Projetos") {
+      scollToPro.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+    if (i === "Contato") {
+      scollToCont.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }
+
   return (
     <motion.li
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <TextMobile>{i}</TextMobile>
+      <TextMobile
+        onClick={() => {
+          toggleOpen();
+          clicked(i);
+        }}
+      >
+        {i}
+      </TextMobile>
     </motion.li>
   );
 };

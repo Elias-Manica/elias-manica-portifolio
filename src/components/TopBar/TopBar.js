@@ -43,7 +43,15 @@ const sidebar = {
   },
 };
 
-export default function TopBar({ showHeader }) {
+export default function TopBar({
+  showHeader,
+  scollToRef,
+  scollToSkills,
+  scollToExp,
+  scollToEduc,
+  scollToPro,
+  scollToCont,
+}) {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
@@ -53,12 +61,66 @@ export default function TopBar({ showHeader }) {
       <Container showHeader={showHeader}>
         <ViewOption>
           <Image src={leftImage} />
-          <TextSection>Sobre mim</TextSection>
-          <TextSection>Skills</TextSection>
-          <TextSection>Experiência</TextSection>
-          <TextSection>Educação</TextSection>
-          <TextSection>Projetos</TextSection>
-          <TextSection>Contato</TextSection>
+          <TextSection
+            onClick={() => {
+              scollToRef.current.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            }}
+          >
+            Sobre mim
+          </TextSection>
+          <TextSection
+            onClick={() => {
+              scollToSkills.current.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            }}
+          >
+            Skills
+          </TextSection>
+          <TextSection
+            onClick={() => {
+              scollToExp.current.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            }}
+          >
+            Experiência
+          </TextSection>
+          <TextSection
+            onClick={() => {
+              scollToEduc.current.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            }}
+          >
+            Educação
+          </TextSection>
+          <TextSection
+            onClick={() => {
+              scollToPro.current.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            }}
+          >
+            Projetos
+          </TextSection>
+          <TextSection
+            onClick={() => {
+              scollToCont.current.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            }}
+          >
+            Contato
+          </TextSection>
         </ViewOption>
         <ButtonMobile>
           <motion.nav
@@ -68,7 +130,15 @@ export default function TopBar({ showHeader }) {
             ref={containerRef}
           >
             <motion.div className="background" variants={sidebar} />
-            <Navigation />
+            <Navigation
+              toggleOpen={toggleOpen}
+              scollToRef={scollToRef}
+              scollToSkills={scollToSkills}
+              scollToExp={scollToExp}
+              scollToEduc={scollToEduc}
+              scollToPro={scollToPro}
+              scollToCont={scollToCont}
+            />
             <MenuToggle toggle={() => toggleOpen()} />
           </motion.nav>
         </ButtonMobile>

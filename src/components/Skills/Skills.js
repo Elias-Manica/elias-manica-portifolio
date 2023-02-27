@@ -19,10 +19,10 @@ import {
   SiAmazonaws,
 } from "react-icons/si";
 
-export default function Skills() {
+export default function Skills({ scollToSkills }) {
   return (
     <>
-      <Container>
+      <Container ref={scollToSkills}>
         <ViewIcon>
           <FaHtml5 />
           <ViewName>HTML</ViewName>

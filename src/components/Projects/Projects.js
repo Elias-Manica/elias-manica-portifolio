@@ -4,10 +4,10 @@ import { Container } from "./styles";
 
 import { listProjects } from "./list";
 
-export default function Projects() {
+export default function Projects({ scollToPro }) {
   return (
     <>
-      <Container>
+      <Container ref={scollToPro}>
         {listProjects.map((item) => (
           <ProjectCard
             title={item.title}

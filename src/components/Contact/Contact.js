@@ -2,10 +2,10 @@ import { Container, View, ViewIcon } from "./styles";
 
 import { SiGithub, SiLinkedin, SiGmail, SiWhatsapp } from "react-icons/si";
 
-export default function Contac() {
+export default function Contac({ scollToCont }) {
   return (
     <>
-      <Container>
+      <Container ref={scollToCont}>
         <View>
           <ViewIcon
             href="https://www.linkedin.com/in/eliasmanica/"

@@ -11,10 +11,28 @@ const variants = {
   },
 };
 
-export const Navigation = () => (
+export const Navigation = ({
+  toggleOpen,
+  scollToRef,
+  scollToSkills,
+  scollToExp,
+  scollToEduc,
+  scollToPro,
+  scollToCont,
+}) => (
   <motion.ul variants={variants}>
     {itemIds.map((i) => (
-      <MenuItem i={i} key={i} />
+      <MenuItem
+        i={i}
+        key={i}
+        toggleOpen={toggleOpen}
+        scollToRef={scollToRef}
+        scollToSkills={scollToSkills}
+        scollToExp={scollToExp}
+        scollToEduc={scollToEduc}
+        scollToPro={scollToPro}
+        scollToCont={scollToCont}
+      />
     ))}
   </motion.ul>
 );

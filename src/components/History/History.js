@@ -13,13 +13,20 @@ import Education from "../Education/Education";
 import Projects from "../Projects/Projects";
 import Contac from "../Contact/Contact";
 
-export default function History() {
+export default function History({
+  scollToRef,
+  scollToSkills,
+  scollToExp,
+  scollToEduc,
+  scollToPro,
+  scollToCont,
+}) {
   return (
     <>
       <Container>
         <Tittle isFirst={true}>Sobre mim</Tittle>
         <ViewApresentation>
-          <Image src={image} />
+          <Image src={image} ref={scollToRef} />
           <TextAbout>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -33,14 +40,14 @@ export default function History() {
           </TextAbout>
         </ViewApresentation>
         <Tittle>Skills</Tittle>
-        <Skills />
-        <Tittle>Experiência</Tittle>
+        <Skills scollToSkills={scollToSkills} />
+        <Tittle ref={scollToExp}>Experiência</Tittle>
         <Experiencie />
-        <Tittle>Educação</Tittle>
+        <Tittle ref={scollToEduc}>Educação</Tittle>
         <Education />
-        <Tittle>Projetos</Tittle>
+        <Tittle ref={scollToPro}> Projetos</Tittle>
         <Projects />
-        <Tittle>Contato</Tittle>
+        <Tittle ref={scollToCont}>Contato</Tittle>
         <Contac />
       </Container>
     </>

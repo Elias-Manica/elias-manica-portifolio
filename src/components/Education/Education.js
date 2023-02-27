@@ -12,10 +12,10 @@ import {
 import bookimg from "../../assets/images/bit-livro.png";
 import angry from "../../assets/images/bit-pistola.png";
 
-export default function Education() {
+export default function Education({ scollToEduc }) {
   return (
     <>
-      <Container>
+      <Container ref={scollToEduc}>
         <ImageHide src={bookimg} isFirst={true} />
         <View>
           <ViewTittle>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Apresentation from "../../components/Apresentation/Apresentation";
 
 import BackgroundSpace from "../../components/BackgroundSpace/BackgroundSpace";
@@ -9,6 +9,12 @@ import { Container, View } from "./styles";
 
 export default function HomeScreen() {
   const [showHeader, setShowHeader] = useState(false);
+  const scollToRef = useRef();
+  const scollToSkills = useRef();
+  const scollToExp = useRef();
+  const scollToEduc = useRef();
+  const scollToPro = useRef();
+  const scollToCont = useRef();
 
   useEffect(() => {
     const scrollListener = () => {
@@ -29,10 +35,25 @@ export default function HomeScreen() {
   return (
     <>
       <View>
-        <TopBar showHeader={showHeader} />
+        <TopBar
+          showHeader={showHeader}
+          scollToRef={scollToRef}
+          scollToSkills={scollToSkills}
+          scollToExp={scollToExp}
+          scollToEduc={scollToEduc}
+          scollToPro={scollToPro}
+          scollToCont={scollToCont}
+        />
         <Container>
           <Apresentation />
-          <History />
+          <History
+            scollToRef={scollToRef}
+            scollToSkills={scollToSkills}
+            scollToExp={scollToExp}
+            scollToEduc={scollToEduc}
+            scollToPro={scollToPro}
+            scollToCont={scollToCont}
+          />
         </Container>
         <BackgroundSpace />
       </View>

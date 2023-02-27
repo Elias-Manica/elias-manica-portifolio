@@ -7,10 +7,10 @@ import {
   ViewTittle,
 } from "./styles";
 
-export default function Experiencie() {
+export default function Experiencie({ scollToExp }) {
   return (
     <>
-      <Container>
+      <Container ref={scollToExp}>
         <View>
           <ViewTittle>
             <TextOffice>Consultor de projetos - Frontend</TextOffice>
